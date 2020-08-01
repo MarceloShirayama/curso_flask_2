@@ -1,14 +1,16 @@
 from flask import Flask
-
-app = Flask(__name__)
-
-
-@app.route("/")
-def index():
-    return "<h1>Hello, Codeshow</h1>"
+import views
 
 
-@app.route("/sobre")
-def sobre():
-    1 / 0
-    return "<p>este é o melhor site de delivery</p>"
+from flask import Flask
+import views
+
+
+def create_app():
+    """Factory principal"""
+
+    app = Flask(__name__)
+    views.init_app(app)
+
+    return app
+    
