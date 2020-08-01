@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ company }}</title>
+  </head>
+  <body>
+    <header>
+        <h1>{{ company }} {{ texto1 }}</h1>
+      </header>
+    <main>
+        <div>
+            <p>{{ texto2 }}</p>
+        </div>
+        <div>
+            <ul>
+                {% for comida  in comidas  %}
+                    <li>{{ comida }}</li>                    
+                {% endfor %}
+            </ul>
+        </div>
+      </main>
+    <footer>criado por: {{ name }}</footer>
+  </body>
+</html>
