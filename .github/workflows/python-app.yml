@@ -25,6 +25,10 @@ jobs:
       run: |
        make install
     
+    - name: Database Migrations
+      run: |
+       make ini_db
+    
     - name: Run tests
       run: |
        make test

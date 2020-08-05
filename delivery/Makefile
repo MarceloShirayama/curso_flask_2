@@ -36,5 +36,5 @@ init_db:
 
 test:
 	FLASK_ENV=test pytest tests/ -v --cov=delivery
-	coverage html
-	chromium './htmlcov/index.html' &
+	# coverage html
+	# chromium './htmlcov/index.html' &
