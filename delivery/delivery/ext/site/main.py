@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template
 
 
-nameby="Marcelo Shirayama"
-company="CodeFoods"
+nameby = "Marcelo Shirayama"
+company = "CodeFoods"
 
 bp = Blueprint("site", __name__)
 
@@ -24,7 +24,8 @@ def about():
         "about.html",
         name=nameby,
         site_name=company,
-        site_subtitle="O melhor site de delivery de comida vegan do mundo! da twitch! e do universo!!!",
+        site_subtitle="O melhor site de delivery de \
+            comida vegan do mundo! da twitch! e do universo!!!",
     )
 
 

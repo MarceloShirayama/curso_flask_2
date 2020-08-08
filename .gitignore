@@ -5,3 +5,5 @@ __pycache__/
 .pytest_cache/
 delivery.egg-info/
 *.db
+exemplo_config/
+*/**secrets.*

@@ -3,7 +3,7 @@ from delivery.ext.db import db, models  # noqa
 
 
 def init_app(app):
-    
+
     @app.cli.command()
     def create_db():
         """
@@ -20,4 +20,3 @@ def init_app(app):
             List orders
         """
         click.echo("list orders")
-   

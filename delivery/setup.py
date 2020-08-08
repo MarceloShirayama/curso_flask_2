@@ -1,7 +1,10 @@
 """
- versão Maior(MAJOR): quando fizer mudanças incompatíveis na API,
- versão Menor(MINOR): quando adicionar funcionalidades mantendo compatibilidade, e
- versão de Correção(PATCH): quando corrigir falhas mantendo compatibilidade.
+ versão Maior(MAJOR):
+ quando fizer mudanças incompatíveis na API,
+ versão Menor(MINOR):
+ quando adicionar funcionalidades mantendo compatibilidade, e
+ versão de Correção(PATCH):
+ quando corrigir falhas mantendo compatibilidade.
  """
 
 from setuptools import setup, find_packages

@@ -14,7 +14,8 @@ class Store(db.Model):
     __tablename__ = "store"
     id = db.Column("id", db.Integer, primary_key=True)
     name = db.Column("name", db.Unicode)
-    category_id = db.Column("category_id", db.Integer, db.ForeignKey("category.id"))
+    category_id = db.Column(
+        "category_id", db.Integer, db.ForeignKey("category.id"))
     user_id = db.Column("user_id", db.Integer, db.ForeignKey("user.id"))
     active = db.Column("active", db.Boolean)
 
@@ -50,7 +51,8 @@ class Order(db.Model):
     id = db.Column("id", db.Integer, primary_key=True)
     created_at = db.Column("created_at", db.DateTime)
     completed = db.Column("completed", db.Boolean)
-    address_id = db.Column("address_id", db.Integer, db.ForeignKey("address.id"))
+    address_id = db.Column(
+        "address_id", db.Integer, db.ForeignKey("address.id"))
     store_id = db.Column("store_id", db.Integer, db.ForeignKey("store.id"))
     user_id = db.Column("user_id", db.Integer, db.ForeignKey("user.id"))
 

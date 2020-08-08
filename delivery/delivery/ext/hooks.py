@@ -6,12 +6,10 @@ def init_app(app):
         """Roda sempre que for feito o primeiro request"""
         print("Primeiro request!")
 
-
     @app.before_request
     def before_request():
         """Roda sempre antes de um request"""
-        print("request ...")        
-    
+        print("request ...")
 
     @app.after_request
     def after_request(response):

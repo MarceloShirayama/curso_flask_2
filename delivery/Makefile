@@ -26,7 +26,7 @@ clean:
 	rm -rf migrations/__pycache__/
 	rm -rf migrations/versions/__pycache__/
 	pip install -e .[dev] --upgrade --no-cache
-	
+		
 install:
 	pip install -e .['dev']
 
@@ -38,3 +38,13 @@ test:
 	FLASK_ENV=test pytest tests/ -v --cov=delivery
 	# coverage html
 	# chromium './htmlcov/index.html' &
+
+format:
+	isort **/*.py
+	black -l 79 **/*.py	
+
+run-dev:
+	FLASK_APP=delivery/app.py FLASK_ENV=development flask run
+
+run-prod:
+	FLASK_APP=delivery/app.py FLASK_ENV=production flask run
